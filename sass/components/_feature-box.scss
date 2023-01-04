@@ -1,26 +1,35 @@
 .feature-box {
-  background-color: rgba($color-white, 0.8);
-  padding: 2.5rem;
-  font-size: 1.5rem;
-  border-radius: 3px;
-  text-align: center;
-  box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
-  transition: all 0.3s;
-  height: 380px;
+    background-color: rgba($color-white, 0.8);
+    padding: 2.5rem;
+    font-size: 1.5rem;
+    border-radius: 3px;
+    text-align: center;
+    box-shadow: 0 1.5rem 4rem rgba($color-dark, 0.15);
+    transition: all 0.3s;
+    height: 380px;
 
-  &__icon {
-    font-size: 6rem;
-    margin-bottom: 0.5rem;
-    background-image: linear-gradient(
-      to right,
-      $color-primary-light,
-      $color-primary-dark
-    );
-    -webkit-background-clip: text;
-    color: transparent;
-  }
+    @include respond(tab-port) {
+        height: 100%;
+        padding: 2rem;
+    }
 
-  &:hover {
-    transform: translateY(-1.5rem) scale(1.03);
-  }
+    &__icon {
+        font-size: 6rem;
+        margin-bottom: 0.5rem;
+        background-image: linear-gradient(
+            to right,
+            $color-primary-light,
+            $color-primary-dark
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include respond(tab-port) {
+            margin-bottom: 0;
+        }
+    }
+
+    &:hover {
+        transform: translateY(-1.5rem) scale(1.03);
+    }
 }
